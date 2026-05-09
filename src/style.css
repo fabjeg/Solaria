@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  color: #fff;
+  font-family: system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(8px) translateX(-50%) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)   translateX(-50%) scale(1); }
+}
+
+@keyframes panelIn {
+  from { opacity: 0; transform: translateY(calc(-50% + 8px)); }
+  to   { opacity: 1; transform: translateY(-50%); }
+}
+
+.animate-panel-in {
+  animation: panelIn 0.2s ease-out both;
+}
